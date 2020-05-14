@@ -1,12 +1,10 @@
 import React from "react"
 import Nav from "../components/nav"
-import './header.module.scss'
+import { AppBar, Typography } from "@material-ui/core"
 
 export default () => (
-  <header>
-    <h1>
-      <span>Josh</span> Suson
-    </h1>
-    <Nav />
-  </header>
+  <AppBar position="fixed">
+    <Typography>Josh Suson</Typography>
+    <Nav></Nav>
+  </AppBar>
 )
