@@ -1,10 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
+import "../utils/fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-export default () => (
-  <nav>
-    <Link to="/">Home</Link>
-    <Link to="/about">About Me</Link>
-    <Link to="/projects">Projects</Link>
-  </nav>
-)
+export default () => <FontAwesomeIcon icon="bars" />
