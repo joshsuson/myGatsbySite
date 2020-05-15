@@ -65,14 +65,26 @@ export default function NavDrawer() {
             </Typography>
           </ListItem>
         </Link>
-        <ListItem button divider={true}>
-          <FontAwesomeIcon icon="user" />
-          <Link to="/about">About Me</Link>
-        </ListItem>
-        <ListItem button divider={true}>
-          <FontAwesomeIcon icon="file-alt" />
-          <Link to="/projects">Projects</Link>
-        </ListItem>
+        <Link to="/about" className={classes.link}>
+          <ListItem button divider={true} className={classes.listItem}>
+            <div className={classes.listIcon}>
+              <FontAwesomeIcon icon="user" />
+            </div>
+            <Typography variant="h6" className={classes.linkText}>
+              About Me
+            </Typography>
+          </ListItem>
+        </Link>
+        <Link to="/projects" className={classes.link}>
+          <ListItem button divider={true} className={classes.listItem}>
+            <div className={classes.listIcon}>
+              <FontAwesomeIcon icon="file-alt" />
+            </div>
+            <Typography variant="h6" className={classes.linkText}>
+              Projects
+            </Typography>
+          </ListItem>
+        </Link>
       </List>
     </ClickAwayListener>
   )
