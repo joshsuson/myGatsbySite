@@ -1,23 +1,32 @@
 import React from "react"
 import Nav from "../components/nav"
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles } from "@material-ui/core/styles"
 import { AppBar, Typography, Toolbar } from "@material-ui/core"
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   title: {
-    alignSelf: center,
-  }
-})
+    marginLeft: "auto",
+    [theme.breakpoints.up("sm")]: {
+      marginLeft: "35%",
+    },
+    [theme.breakpoints.up("md")]: {
+      marginLeft: "40%",
+    },
+  },
+}))
 
-export default () => (
+export default function HeaderBar() {
   const classes = useStyles()
-  <>
-    <AppBar position="fixed">
-      <Toolbar>
-        <Nav />
-        <Typography className={}>Josh Suson</Typography>
-      </Toolbar>
-    </AppBar>
-    <Toolbar />
-  </>
-)
+
+  return (
+    <>
+      <AppBar position="fixed">
+        <Toolbar>
+          <Nav />
+          <Typography className={classes.title}>Josh Suson</Typography>
+        </Toolbar>
+      </AppBar>
+      <Toolbar />
+    </>
+  )
+}
