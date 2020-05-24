@@ -6,8 +6,10 @@ import clsx from "clsx"
 const useStyles = makeStyles(theme => ({
 	customForm: {
 		textAlign: "center",
-		width: "50%",
 		margin: "0 auto"
+		//	[theme.breakpoints.up("md")]: {
+		//		width: "50%"
+		//	}
 	},
 	nameField: {
 		width: "45%"
