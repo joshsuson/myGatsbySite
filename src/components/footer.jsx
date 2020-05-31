@@ -14,13 +14,17 @@ const useStyles = makeStyles({
     margin: "0 auto",
     textAlign: "center",
   },
+  footer: {
+    padding: "16px",
+    borderTop: "1px solid #eee",
+  },
 })
 
 export default () => {
   const classes = useStyles()
 
   return (
-    <div>
+    <div className={classes.footer}>
       <Typography variant="h4" align="center">
         Would you like to contact me?
       </Typography>
@@ -29,27 +33,21 @@ export default () => {
       </Typography>
       <Form />
       <div className={classes.socialDiv}>
-        <a href="">
+        <a href="https://twitter.com/joshsuson" target="_blank">
           <FontAwesomeIcon
             icon={["fab", "twitter-square"]}
             className={classes.customIcon}
           />
         </a>
-        <a href="">
+        <a href="https://github.com/joshsuson" target="_blank">
           <FontAwesomeIcon
             icon={["fab", "github-square"]}
             className={classes.customIcon}
           />
         </a>
-        <a href="">
+        <a href="https://www.linkedin.com/in/joshsuson/" target="_blank">
           <FontAwesomeIcon
             icon={["fab", "linkedin"]}
-            className={classes.customIcon}
-          />
-        </a>
-        <a href="">
-          <FontAwesomeIcon
-            icon={["fab", "facebook-square"]}
             className={classes.customIcon}
           />
         </a>

@@ -39,7 +39,17 @@ const useStyles = makeStyles(theme => ({
     },
   },
   customButton: {
-    backgroundColor: "green",
+    display: "flex",
+    margin: "0 auto",
+    [theme.breakpoints.up("md")]: {
+      width: "92%",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "91%",
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: "90%",
+    },
   },
 }))
 
@@ -81,7 +91,12 @@ export default function FooterForm() {
         rows={4}
         className={message}
       />
-      <Button component="submit" className={classes.customButton}>
+      <Button
+        component="submit"
+        variant="contained"
+        color="primary"
+        className={classes.customButton}
+      >
         Submit
       </Button>
     </form>
