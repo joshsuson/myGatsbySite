@@ -1,5 +1,5 @@
 import React from "react"
-import { TextField } from "@material-ui/core"
+import { TextField, Button } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 import clsx from "clsx"
 
@@ -37,6 +37,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up("xl")]: {
       width: "90%",
     },
+  },
+  customButton: {
+    backgroundColor: "green",
   },
 }))
 
@@ -78,6 +81,9 @@ export default function FooterForm() {
         rows={4}
         className={message}
       />
+      <Button component="submit" className={classes.customButton}>
+        Submit
+      </Button>
     </form>
   )
 }
