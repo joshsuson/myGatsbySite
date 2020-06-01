@@ -5,6 +5,7 @@ import {
   faHome,
   faUser,
   faFileAlt,
+  faSlash,
 } from "@fortawesome/free-solid-svg-icons"
 
-library.add(fab, faBars, faHome, faUser, faFileAlt)
+library.add(fab, faBars, faHome, faUser, faFileAlt, faSlash)
