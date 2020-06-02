@@ -4,8 +4,6 @@ import { Container, Typography } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 import Layout from "../templates/layout"
 import Img from "gatsby-image"
-import "../utils/fontawesome"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const useStyles = makeStyles({
   customContainer: {
@@ -47,18 +45,7 @@ const HomePage = ({ data }) => {
             imgStyle={{ borderRadius: "5px" }}
           />
         </div>
-        <div>
-          <div>
-            <Typography variant="h3">Father</Typography>
-            <Typography variant="body1">
-              One of the greatest things that ever happened to me was having
-              kids. Everything I do is to love, teach, and support my children.
-              As Craig Ferguson likes to say "The moment my kids were born I
-              became a supporting character in someone else's story"
-            </Typography>
-          </div>
-          <FontAwesomeIcon icon="slash" />
-        </div>
+        <div></div>
       </Container>
     </Layout>
   )
