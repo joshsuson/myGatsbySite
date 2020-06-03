@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { Container, Typography } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 import Layout from "../templates/layout"
+import CustomCard from "../components/customCard"
 import Img from "gatsby-image"
 
 const useStyles = makeStyles({
@@ -24,6 +25,13 @@ const useStyles = makeStyles({
   customHeadline: {
     flexBasis: "40%",
   },
+
+  cardDiv: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    margin: "48px 0",
+  },
 })
 
 const HomePage = ({ data }) => {
@@ -40,12 +48,33 @@ const HomePage = ({ data }) => {
             Father/ Husband/ Developer/ Storyteller
           </Typography>
           <Img
-            fluid={data.file.childImageSharp.fluid}
+            fluid={data.family.childImageSharp.fluid}
             className={classes.customImage}
             imgStyle={{ borderRadius: "5px" }}
           />
         </div>
-        <div></div>
+        <div className={classes.cardDiv}>
+          <CustomCard
+            image={data.husband.childImageSharp.fluid}
+            titleText="Father/Husband"
+            excerptText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quam purus, pulvinar et lorem a, fermentum dapibus libero. Ut eget felis at magna aliquam dictum."
+            buttonText="More About Me"
+            link="/about"
+          />
+          <CustomCard
+            image={data.develop.childImageSharp.fluid}
+            titleText="Developer"
+            excerptText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quam purus, pulvinar et lorem a, fermentum dapibus libero. Ut eget felis at magna aliquam dictum."
+            buttonText="My Projects"
+            link="/projects"
+          />
+          <CustomCard
+            image={data.story.childImageSharp.fluid}
+            titleText="Storyteller"
+            excerptText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quam purus, pulvinar et lorem a, fermentum dapibus libero. Ut eget felis at magna aliquam dictum."
+            buttonText="My Stories"
+          />
+        </div>
       </Container>
     </Layout>
   )
@@ -53,9 +82,30 @@ const HomePage = ({ data }) => {
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "images/family.jpg" }) {
+    family: file(relativePath: { eq: "images/family.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 500) {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    husband: file(relativePath: { eq: "images/wifeandkids.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    develop: file(relativePath: { eq: "images/develop.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    story: file(relativePath: { eq: "images/story.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
