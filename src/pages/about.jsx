@@ -1,8 +1,9 @@
 import React from "react"
 import Layout from "../templates/layout"
+import RandomFact from "../components/randomFact"
 
 export default () => (
   <Layout>
-    <h2>This is the about page</h2>
+    <RandomFact />
   </Layout>
 )
