@@ -13,7 +13,7 @@ const useStyles = makeStyles({
   },
   customImage: {
     width: "40%",
-    borderRadius: "5px",
+    borderRadius: "15px",
     border: "10px solid #3e3e3e",
   },
   jumbotron: {
