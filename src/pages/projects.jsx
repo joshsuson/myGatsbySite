@@ -1,8 +1,9 @@
 import React from "react"
 import Layout from "../templates/layout"
+import Treehouse from "../components/treehouse"
 
 export default () => (
   <Layout>
-    <h2>This is the about page</h2>
+    <Treehouse />
   </Layout>
 )
