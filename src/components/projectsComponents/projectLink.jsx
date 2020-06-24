@@ -22,10 +22,14 @@ const ProjectLink = props => {
   const classes = useStyles()
 
   return (
-    <Link to={props.link} id={props.id} className={classes.customLink}>
+    // <Link to={props.link} id={props.id} className={classes.customLink}>
+    //   <Img fluid={props.image} className={classes.customImg} />
+    //   <Typography>{props.title}</Typography>
+    // </Link>
+    <div id={props.id} className={classes.customLink} onClick={props.onClick}>
       <Img fluid={props.image} className={classes.customImg} />
       <Typography>{props.title}</Typography>
-    </Link>
+    </div>
   )
 }
 
