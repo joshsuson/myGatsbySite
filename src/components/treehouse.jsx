@@ -18,14 +18,12 @@ const Treehouse = () => {
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
-    console.log(value)
   }
 
   const handleClick = e => {
     if (e.target.nodeName === "IMG") {
-      console.log("clicked")
+      console.log(e.target.title)
     }
-    console.log(e.target.nodeName)
   }
 
   return (
