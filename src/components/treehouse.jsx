@@ -1,31 +1,21 @@
 import React from "react"
-import { AppBar, Typography, Tabs, Tab } from "@material-ui/core"
-import AllProjects from "./projectsComponents/allProjects"
-import HtmlProjects from "./projectsComponents/htmlProjects"
-import CssProjects from "./projectsComponents/cssProjects"
-import { makeStyles } from "@material-ui/core/styles"
-import JavascriptProjects from "./projectsComponents/javascriptProjects"
-
-const useStyles = makeStyles({
-  customDiv: {
-    height: "600px",
-  },
-})
+import { Typography } from "@material-ui/core"
+import ProjectPicker from "./projectsComponents/projectPicker"
+import Project from "./projectsComponents/project"
+import { treehouseProjects } from "../data/treehouseProjects"
 
 const Treehouse = () => {
-  const classes = useStyles()
-  const [value, setValue] = React.useState(0)
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue)
-  }
+  const [project, setProject] = React.useState(null)
 
   const handleClick = e => {
     if (e.target.nodeName === "IMG") {
-      console.log(e.target.title)
+      setProject(e.target.title)
     }
   }
 
+  const buttonClick = () => {
+    setProject(null)
+  }
   return (
     <>
       <div>
@@ -35,20 +25,13 @@ const Treehouse = () => {
           Techdegree
         </Typography>
       </div>
-      <AppBar position="static">
-        <Tabs value={value} onChange={handleChange}>
-          <Tab label="All" />
-          <Tab label="HTML" />
-          <Tab label="CSS" />
-          <Tab label="Javascript" />
-        </Tabs>
-      </AppBar>
-      <div className={classes.customDiv}>
-        {value === 0 && <AllProjects />}
-        {value === 1 && <HtmlProjects />}
-        {value === 2 && <CssProjects />}
-        {value === 3 && <JavascriptProjects onClick={handleClick} />}
-      </div>
+      {project === null && <ProjectPicker onClick={handleClick} />}
+      {project === "projectFive" && (
+        <Project data={treehouseProjects.projectFive} onClick={buttonClick} />
+      )}
+      {project === "projectSix" && (
+        <Project data={treehouseProjects.projectSix} onClick={buttonClick} />
+      )}
     </>
   )
 }
