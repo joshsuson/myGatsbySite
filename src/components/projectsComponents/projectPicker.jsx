@@ -1,5 +1,5 @@
 import React from "react"
-import { AppBar, Typography, Tabs, Tab } from "@material-ui/core"
+import { AppBar, Tabs, Tab } from "@material-ui/core"
 import AllProjects from "./allProjects"
 import HtmlProjects from "./htmlProjects"
 import CssProjects from "./cssProjects"
@@ -7,7 +7,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import JavascriptProjects from "./javascriptProjects"
 
 const ProjectPicker = props => {
-  const [value, setValue] = React.useState(0)
+  const [value, setValue] = React.useState(props.tabValue)
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
@@ -24,9 +24,9 @@ const ProjectPicker = props => {
         </Tabs>
       </AppBar>
       <div>
-        {value === 0 && <AllProjects />}
-        {value === 1 && <HtmlProjects />}
-        {value === 2 && <CssProjects />}
+        {value === 0 && <AllProjects onClick={props.onClick} />}
+        {value === 1 && <HtmlProjects onClick={props.onClick} />}
+        {value === 2 && <CssProjects onClick={props.onClick} />}
         {value === 3 && <JavascriptProjects onClick={props.onClick} />}
       </div>
     </>

@@ -1,7 +1,7 @@
 import React from "react"
 import ProjectLink from "./projectLink"
-import { useStaticQuery, graphql } from "gatsby"
 import { makeStyles } from "@material-ui/core/styles"
+import useProjectImageData from "../../data/projectImageData"
 
 const useStyles = makeStyles({
   customDiv: {
@@ -12,73 +12,44 @@ const useStyles = makeStyles({
   },
 })
 
-const HtmlProjects = () => {
+const HtmlProjects = props => {
   const classes = useStyles()
-  const data = useStaticQuery(graphql`
-    query {
-      projectOne: file(
-        relativePath: { eq: "images/projectPictures/projectOne.jpg" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      projectThree: file(
-        relativePath: { eq: "images/projectPictures/projectThree.jpg" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      projectFive: file(
-        relativePath: { eq: "images/projectPictures/projectFive.jpg" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      projectSeven: file(
-        relativePath: { eq: "images/projectPictures/projectSeven.jpg" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+  const {
+    projectOne,
+    projectThree,
+    projectFive,
+    projectSeven,
+  } = useProjectImageData()
+
   return (
     <div className={classes.customDiv}>
       <ProjectLink
         link={"/"}
         id={"projectOne"}
-        image={data.projectOne.childImageSharp.fluid}
+        image={projectOne.childImageSharp.fluid}
         title={"Project One"}
+        onClick={props.onClick}
       />
       <ProjectLink
         link={"/"}
         id={"projectThree"}
-        image={data.projectThree.childImageSharp.fluid}
+        image={projectThree.childImageSharp.fluid}
         title={"Project Three"}
+        onClick={props.onClick}
       />
       <ProjectLink
         link={"/"}
         id={"projectFive"}
-        image={data.projectFive.childImageSharp.fluid}
+        image={projectFive.childImageSharp.fluid}
         title={"Project Five"}
+        onClick={props.onClick}
       />
       <ProjectLink
         link={"/"}
         id={"projectSeven"}
-        image={data.projectSeven.childImageSharp.fluid}
+        image={projectSeven.childImageSharp.fluid}
         title={"Project Seven"}
+        onClick={props.onClick}
       />
     </div>
   )
