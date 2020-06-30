@@ -30,6 +30,7 @@ const CssProjects = props => {
         image={projectTwo.childImageSharp.fluid}
         title={"Project Two"}
         onClick={props.onClick}
+        tab={"css"}
       />
       <ProjectLink
         link={"/"}
@@ -37,6 +38,7 @@ const CssProjects = props => {
         image={projectThree.childImageSharp.fluid}
         title={"Project Three"}
         onClick={props.onClick}
+        tab={"css"}
       />
       <ProjectLink
         link={"/"}
@@ -44,6 +46,7 @@ const CssProjects = props => {
         image={projectFour.childImageSharp.fluid}
         title={"Project Four"}
         onClick={props.onClick}
+        tab={"css"}
       />
       <ProjectLink
         link={"/"}
@@ -51,6 +54,7 @@ const CssProjects = props => {
         image={projectSeven.childImageSharp.fluid}
         title={"Project Seven"}
         onClick={props.onClick}
+        tab={"css"}
       />
       <ProjectLink
         link={"/"}
@@ -58,6 +62,7 @@ const CssProjects = props => {
         image={projectEight.childImageSharp.fluid}
         title={"Project Eight"}
         onClick={props.onClick}
+        tab={"css"}
       />
     </div>
   )

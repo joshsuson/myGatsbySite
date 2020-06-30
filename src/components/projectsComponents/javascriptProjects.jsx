@@ -29,6 +29,7 @@ const JavascriptProjects = props => {
         image={projectFive.childImageSharp.fluid}
         title={"Project Five"}
         onClick={props.onClick}
+        tab={"javascript"}
       />
       <ProjectLink
         link={"/"}
@@ -36,6 +37,7 @@ const JavascriptProjects = props => {
         image={projectSix.childImageSharp.fluid}
         title={"Project Six"}
         onClick={props.onClick}
+        tab={"javascript"}
       />
       <ProjectLink
         link={"/"}
@@ -43,6 +45,7 @@ const JavascriptProjects = props => {
         image={projectSeven.childImageSharp.fluid}
         title={"Project Seven"}
         onClick={props.onClick}
+        tab={"javascript"}
       />
       <ProjectLink
         link={"/"}
@@ -50,6 +53,7 @@ const JavascriptProjects = props => {
         image={projectEight.childImageSharp.fluid}
         title={"Project Eight"}
         onClick={props.onClick}
+        tab={"javascript"}
       />
     </div>
   )

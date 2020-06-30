@@ -10,7 +10,21 @@ const Treehouse = () => {
 
   const handleClick = e => {
     if (e.target.nodeName === "IMG") {
+      const languageTab =
+        e.target.parentElement.parentElement.parentElement.dataset.tab
       setProject(e.target.title)
+      {
+        languageTab === "all" && setValue(0)
+      }
+      {
+        languageTab === "html" && setValue(1)
+      }
+      {
+        languageTab === "css" && setValue(2)
+      }
+      {
+        languageTab === "javascript" && setValue(3)
+      }
     }
   }
 

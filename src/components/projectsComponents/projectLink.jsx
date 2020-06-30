@@ -26,7 +26,12 @@ const ProjectLink = props => {
     //   <Img fluid={props.image} className={classes.customImg} />
     //   <Typography>{props.title}</Typography>
     // </Link>
-    <div id={props.id} className={classes.customLink} onClick={props.onClick}>
+    <div
+      id={props.id}
+      className={classes.customLink}
+      onClick={props.onClick}
+      data-tab={props.tab}
+    >
       <Img title={props.id} fluid={props.image} className={classes.customImg} />
       <Typography>{props.title}</Typography>
     </div>

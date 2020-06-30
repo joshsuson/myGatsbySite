@@ -29,6 +29,7 @@ const HtmlProjects = props => {
         image={projectOne.childImageSharp.fluid}
         title={"Project One"}
         onClick={props.onClick}
+        tab={"html"}
       />
       <ProjectLink
         link={"/"}
@@ -36,6 +37,7 @@ const HtmlProjects = props => {
         image={projectThree.childImageSharp.fluid}
         title={"Project Three"}
         onClick={props.onClick}
+        tab={"html"}
       />
       <ProjectLink
         link={"/"}
@@ -43,6 +45,7 @@ const HtmlProjects = props => {
         image={projectFive.childImageSharp.fluid}
         title={"Project Five"}
         onClick={props.onClick}
+        tab={"html"}
       />
       <ProjectLink
         link={"/"}
@@ -50,6 +53,7 @@ const HtmlProjects = props => {
         image={projectSeven.childImageSharp.fluid}
         title={"Project Seven"}
         onClick={props.onClick}
+        tab={"html"}
       />
     </div>
   )
