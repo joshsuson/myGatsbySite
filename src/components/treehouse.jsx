@@ -3,10 +3,22 @@ import { Typography } from "@material-ui/core"
 import ProjectPicker from "./projectsComponents/projectPicker"
 import Project from "./projectsComponents/project"
 import { treehouseProjects } from "../data/treehouseProjects"
+import useProjectImageData from "../data/projectImageData"
 
 const Treehouse = () => {
   const [project, setProject] = React.useState(null)
   const [value, setValue] = React.useState(0)
+
+  const {
+    projectOne,
+    projectTwo,
+    projectThree,
+    projectFour,
+    projectFive,
+    projectSix,
+    projectSeven,
+    projectEight,
+  } = useProjectImageData()
 
   const handleClick = e => {
     if (e.target.nodeName === "IMG") {
@@ -45,7 +57,11 @@ const Treehouse = () => {
         <ProjectPicker tabValue={value} onClick={handleClick} />
       )}
       {project === "projectOne" && (
-        <Project data={treehouseProjects.projectOne} onClick={buttonClick} />
+        <Project
+          data={treehouseProjects.projectOne}
+          image={projectOne.childImageSharp.fluid}
+          onClick={buttonClick}
+        />
       )}
       {project === "projectTwo" && (
         <Project data={treehouseProjects.projectTwo} onClick={buttonClick} />
