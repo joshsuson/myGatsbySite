@@ -13,6 +13,8 @@ export const treehouseProjects = {
   projectTwo: {
     title: "Project Two",
     goal: "The goal of Project Two",
+	link: "",
+	github: "",
   },
   projectThree: {
     title: "Project Three",
