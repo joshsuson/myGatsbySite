@@ -64,25 +64,53 @@ const Treehouse = () => {
         />
       )}
       {project === "projectTwo" && (
-        <Project data={treehouseProjects.projectTwo} onClick={buttonClick} />
+        <Project
+          data={treehouseProjects.projectTwo}
+          onClick={buttonClick}
+          image={projectTwo.childImageSharp.fluid}
+        />
       )}
       {project === "projectThree" && (
-        <Project data={treehouseProjects.projectThree} onClick={buttonClick} />
+        <Project
+          data={treehouseProjects.projectThree}
+          onClick={buttonClick}
+          image={projectThree.childImageSharp.fluid}
+        />
       )}
       {project === "projectFour" && (
-        <Project data={treehouseProjects.projectFour} onClick={buttonClick} />
+        <Project
+          data={treehouseProjects.projectFour}
+          onClick={buttonClick}
+          image={projectFour.childImageSharp.fluid}
+        />
       )}
       {project === "projectFive" && (
-        <Project data={treehouseProjects.projectFive} onClick={buttonClick} />
+        <Project
+          data={treehouseProjects.projectFive}
+          onClick={buttonClick}
+          image={projectFive.childImageSharp.fluid}
+        />
       )}
       {project === "projectSix" && (
-        <Project data={treehouseProjects.projectSix} onClick={buttonClick} />
+        <Project
+          data={treehouseProjects.projectSix}
+          onClick={buttonClick}
+          image={projectSix.childImageSharp.fluid}
+        />
       )}
       {project === "projectSeven" && (
-        <Project data={treehouseProjects.projectSeven} onClick={buttonClick} />
+        <Project
+          data={treehouseProjects.projectSeven}
+          onClick={buttonClick}
+          image={projectSeven.childImageSharp.fluid}
+        />
       )}
       {project === "projectEight" && (
-        <Project data={treehouseProjects.projectEight} onClick={buttonClick} />
+        <Project
+          data={treehouseProjects.projectEight}
+          onClick={buttonClick}
+          image={projectEight.childImageSharp.fluid}
+        />
       )}
     </>
   )
