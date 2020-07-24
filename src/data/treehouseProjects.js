@@ -39,7 +39,10 @@ export const treehouseProjects = {
   },
   projectFive: {
     title: "Project Five",
-    goal: "The goal of Project Five",
+    goal: "Project five was the big dive into javascript. We had to learn all about javascript and alongside it jquery. Tasked with making a mockup searchable photo gallery, we were given a single png and had to write the HTML, CSS, and javascript to bring that image to life.",
+		solution: "",
+		link: "",
+		github: "",
   },
   projectSix: {
     title: "Project Six",
