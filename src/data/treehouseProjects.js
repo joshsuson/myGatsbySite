@@ -40,9 +40,9 @@ export const treehouseProjects = {
   projectFive: {
     title: "Project Five",
     goal: "Project five was the big dive into javascript. We had to learn all about javascript and alongside it jquery. Tasked with making a mockup searchable photo gallery, we were given a single png and had to write the HTML, CSS, and javascript to bring that image to life.",
-	solution: "",
-	link: "",
-	github: "",
+	solution: "We were given a set of photos and thumbnail photos. Start I wrote the HTML and CSS to build the gallery to match the mock up given. Then I used very simple Javascript and jquery to create a lightbox for when the user clicks on the photo. To go above and beyond I used Javascript to create a search function which allowed the user to search for aspects in the photos and filter the results.",
+	link: "https://joshsuson.github.io/Techdegree-Project-5",
+	github: "https://githube.com/joshsuson/Techdegree-Project-5",
   },
   projectSix: {
     title: "Project Six",
