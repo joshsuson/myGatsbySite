@@ -48,19 +48,28 @@ export const treehouseProjects = {
   },
   projectSix: {
     title: "Project Six",
-    goal: "Project Six was a big jump into javascript. ",
+    goal:
+      "Project Six was a big jump into javascript. We we were tasked with building an interactive letter game where the user guesses letters to make up a phrase. The course gave us a visual mockup as well as majority of the CSS and HTML. We had to write all of the javascript logic for the course.",
+    solution:
+      "The first steps were using javascript to get the letters to respond to user input. From there it was all about keeping track of misses and correct guesses until the user had guessed all the letters. Then a screen showing win or lose had to show. To go above and beyond I set the game up to reset so that the user could play over again whether they win or lose.",
     link: "https://joshsuson.github.io/Techdegree-Project-6",
     github: "https://githube.com/joshsuson/Techdegree-Project-6",
   },
   projectSeven: {
     title: "Project Seven",
-    goal: "The goal of Project Seven",
+    goal:
+      "Project Seven was the biggest project of the entire techdegree. All of the skills we learned had come together. On top of that we also started learning about storing and retrieving data in the local host of the browser. For this project we were tasked with building a mock dashboard app. We were only given a single mockup image and a list of functionality. Then we had to build the functioning dashboard. It had to include javascript charts, toggle buttons, a notification window, and more.",
+    solution:
+      "This was by far the hardest project. I started by getting the HTML and CSS to match the mockup for the most part. I utilized the CSS grid function to build out the side bar of the app and make everything responsive. From there it was all about building the Javascript to add functionality to the dashboard. I used a jquery plugin to generate the charts and then used vanilla javascript to create the toggle switches, alert bar, and notification window. To go above in beyond I made the 'settings' portion interactable and allowed the user to store and clear their data from browser cache. ",
     link: "https://joshsuson.github.io/Techdegree-Project-7",
     github: "https://githube.com/joshsuson/Techdegree-Project-7",
   },
   projectEight: {
     title: "Project Eight",
-    goal: "The goal of Project Eight",
+    goal:
+      "Project Eight was all about learning to pull data from an API. We were tasked with building an employee database that pulls data from a random person API. Then we had to use that data in the site.",
+    solution:
+      "This one was straightforward. I built the CSS and HTML to match the provided mockup. Then I used Javascript to build the popup modal when you clicked an employee, which provided more of the data. All the data was pulled from the API and parsed through Javascript. To go above and beyond I spent time giving the website and interesting dark mode theme and made the popup modals have arrows so that you could navigate through the employees.",
     link: "https://joshsuson.github.io/Techdegree-Project-8",
     github: "https://githube.com/joshsuson/Techdegree-Project-8",
   },

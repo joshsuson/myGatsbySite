@@ -16,7 +16,7 @@ const ProjectPicker = props => {
   return (
     <>
       <AppBar position="static">
-        <Tabs value={value} onChange={handleChange}>
+        <Tabs value={value} onChange={handleChange} centered>
           <Tab label="All" />
           <Tab label="HTML" />
           <Tab label="CSS" />

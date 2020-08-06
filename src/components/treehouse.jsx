@@ -1,13 +1,23 @@
 import React from "react"
 import { Typography } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core/styles"
 import ProjectPicker from "./projectsComponents/projectPicker"
 import Project from "./projectsComponents/project"
 import { treehouseProjects } from "../data/treehouseProjects"
 import useProjectImageData from "../data/projectImageData"
 
+const useStyles = makeStyles({
+  titleDiv: {
+    textAlign: "center",
+    margin: "24px 0",
+  },
+})
+
 const Treehouse = () => {
   const [project, setProject] = React.useState(null)
   const [value, setValue] = React.useState(0)
+
+  const classes = useStyles()
 
   const {
     projectOne,
@@ -46,7 +56,7 @@ const Treehouse = () => {
 
   return (
     <>
-      <div>
+      <div className={classes.titleDiv}>
         <Typography variant="h2">Techdegree Projects</Typography>
         <Typography variant="subtitle1">
           Check out my projects from Team Treehouse's Front End Web Devolopment
