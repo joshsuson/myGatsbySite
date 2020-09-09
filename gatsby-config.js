@@ -20,5 +20,6 @@ module.exports = {
     `gatsby-plugin-material-ui`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-transformer-remark`,
   ],
 }
