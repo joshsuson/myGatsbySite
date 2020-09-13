@@ -1,6 +1,6 @@
 ---
 title: Flourishing Finishes
-date: 2020-09-11T00:17:21.731Z
+date: 2020-09-13T23:35:16.239Z
 description: A site for a small Stampin' Up Business
 thumbnail: ff-screenshot.png
 ---
