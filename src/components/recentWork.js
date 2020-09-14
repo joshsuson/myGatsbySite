@@ -1,28 +1,27 @@
 import React from "react"
-// import Img from "gatsby-image"
 import CustomCard from "./customCard"
+import { makeStyles } from "@material-ui/core/styles"
+
+const useStyles = makeStyles({
+  customDiv: {
+    display: "flex",
+  },
+})
 
 const RecentWork = props => {
+  const classes = useStyles()
   return (
-    <>
-      <div>
-        {props.data.allMarkdownRemark.edges.map(({ node }) => (
-          //   <Card key={node.id}>
-          //     <Img fluid={node.frontmatter.thumbnail.childImageSharp.fluid} />
-          //     <h1>{node.frontmatter.title}</h1>
-          //     <h3>{node.frontmatter.description}</h3>
-          //     <p>{node.excerpt}</p>
-          //   </Card>
-          <CustomCard
-            key={node.id}
-            image={node.frontmatter.thumbnail.childImageSharp.fluid}
-            titleText={node.frontmatter.title}
-            buttonText="Read More"
-            excerptText={node.frontmatter.description}
-          />
-        ))}
-      </div>
-    </>
+    <div className={classes.customDiv}>
+      {props.data.allMarkdownRemark.edges.map(({ node }) => (
+        <CustomCard
+          key={node.id}
+          image={node.frontmatter.thumbnail.childImageSharp.fluid}
+          titleText={node.frontmatter.title}
+          buttonText="Read More"
+          excerptText={node.frontmatter.description}
+        />
+      ))}
+    </div>
   )
 }
 
