@@ -4,7 +4,6 @@ import Treehouse from "../components/treehouse"
 import RecentWork from "../components/recentWork"
 
 export default ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <RecentWork data={data} />
