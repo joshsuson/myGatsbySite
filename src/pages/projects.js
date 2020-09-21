@@ -19,6 +19,9 @@ export const query = graphql`
       edges {
         node {
           id
+          fields {
+            slug
+          }
           frontmatter {
             title
             description

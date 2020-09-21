@@ -31,6 +31,7 @@ const RecentWork = props => {
             titleText={node.frontmatter.title}
             excerptText={node.frontmatter.description}
             buttonText="Read More"
+            link={node.fields.slug}
           />
         ))}
       </div>
