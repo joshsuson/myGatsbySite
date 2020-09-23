@@ -85,14 +85,14 @@ const HomePage = ({ data }) => {
           <CustomCard
             image={data.husband.childImageSharp.fluid}
             titleText="Father/Husband"
-            excerptText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quam purus, pulvinar et lorem a, fermentum dapibus libero. Ut eget felis at magna aliquam dictum."
+            excerptText="My family is my whole world. Everything I do, I'm doing for them in some way. As you connect with me and get to know me, it will become clear that the way to my heart is through these guys."
             buttonText="More About Me"
             link="/about"
           />
           <CustomCard
             image={data.develop.childImageSharp.fluid}
             titleText="Designer/Developer"
-            excerptText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quam purus, pulvinar et lorem a, fermentum dapibus libero. Ut eget felis at magna aliquam dictum."
+            excerptText="Design and development don't always go together, but when they do something amazing can happen. That's my goal; To create amazing products with thought through design and efficient development."
             buttonText="My Projects"
             link="/projects"
             imgStyle={{ objectPosition: "top center" }}
