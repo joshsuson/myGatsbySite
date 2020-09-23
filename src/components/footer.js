@@ -1,7 +1,6 @@
 import React from "react"
-import Form from "../components/form"
+import { Link } from "gatsby"
 import { makeStyles } from "@material-ui/core/styles"
-import { Typography } from "@material-ui/core"
 import "../utils/fontawesome"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
@@ -9,6 +8,14 @@ const useStyles = makeStyles({
   customIcon: {
     fontSize: "2.5em",
     padding: "4px",
+    "& path": {
+      fill: "hsla(218, 100%, 65%, .80)",
+    },
+    "&:hover": {
+      "& path": {
+        fill: "hsla(218, 100%, 75%, .80)",
+      },
+    },
   },
   socialDiv: {
     margin: "0 auto",
@@ -16,7 +23,20 @@ const useStyles = makeStyles({
   },
   footer: {
     padding: "16px",
-    borderTop: "1px solid #eee",
+    borderTop: "1px solid rgba(243, 246, 248, .30)",
+  },
+  footerNav: {
+    textAlign: "center",
+    marginBottom: "8px",
+  },
+  link: {
+    textDecoration: "none",
+    fontFamily: "Roboto, sans-serif",
+    padding: "0 8px",
+    color: "hsl(218, 14%, 60%)",
+    "&:hover": {
+      color: "hsl(218, 14%, 80%)",
+    },
   },
 })
 
@@ -25,13 +45,20 @@ export default () => {
 
   return (
     <div className={classes.footer}>
-      <Typography variant="h4" align="center">
-        Would you like to contact me?
-      </Typography>
-      <Typography variant="h6" align="center">
-        Fill out the information below
-      </Typography>
-      <Form />
+      <div className={classes.footerNav}>
+        <Link to="/" className={classes.link}>
+          Home
+        </Link>
+        <Link to="/about" className={classes.link}>
+          About
+        </Link>
+        <Link to="/projects" className={classes.link}>
+          Projects
+        </Link>
+        <Link to="/contact" className={classes.link}>
+          Contact
+        </Link>
+      </div>
       <div className={classes.socialDiv}>
         <a href="https://twitter.com/joshsuson" target="_blank">
           <FontAwesomeIcon

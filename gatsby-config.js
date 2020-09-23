@@ -21,5 +21,13 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
   ],
 }

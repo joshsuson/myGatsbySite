@@ -6,33 +6,58 @@ import Layout from "../templates/layout"
 import CustomCard from "../components/customCard"
 import Img from "gatsby-image"
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   customContainer: {
     padding: "24px 0",
     marginBottom: "24px",
   },
   customImage: {
-    width: "40%",
+    width: "100%",
     borderRadius: "15px",
-    border: "10px solid #3e3e3e",
+  },
+  imageDiv: {
+    backgroundColor: "#2373ff",
+    backgroundImage: "linear-gradient(0deg, #2373ff 0%, #8ab4ff 100%);",
+    padding: "3px",
+    width: "90%",
+    borderRadius: "15px",
+    margin: "16px 0",
+    [theme.breakpoints.up("md")]: {
+      width: "50%",
+    },
   },
   jumbotron: {
     display: "flex",
     flexWrap: "wrap",
     alignContent: "center",
     justifyContent: "space-around",
+    [theme.breakpoints.up("md")]: {
+      flexDirection: "row-reverse",
+    },
   },
   customHeadline: {
-    flexBasis: "40%",
+    fontSize: "1.4em",
+    [theme.breakpoints.up("md")]: {
+      flexBasis: "40%",
+      textAlign: "right",
+      fontSize: "4.8em",
+      margin: "16px 0",
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "6.2em",
+    },
   },
 
   cardDiv: {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-around",
-    margin: "48px 0",
+    margin: "32px 0 16px 0",
+    [theme.breakpoints.up("lg")]: {
+      justifyContent: "space-evenly",
+    },
   },
-})
+}))
 
 const HomePage = ({ data }) => {
   const classes = useStyles()
@@ -40,18 +65,21 @@ const HomePage = ({ data }) => {
     <Layout>
       <Container className={classes.customContainer}>
         <div className={classes.jumbotron}>
+          <div className={classes.imageDiv}>
+            <Img
+              fluid={data.family.childImageSharp.fluid}
+              className={classes.customImage}
+              imgStyle={{ borderRadius: "5px" }}
+            />
+          </div>
+
           <Typography
             variant="h1"
-            align="right"
+            align="center"
             className={classes.customHeadline}
           >
-            Father/ Husband/ Developer/ Storyteller
+            Father/ Husband/ Designer/ Developer
           </Typography>
-          <Img
-            fluid={data.family.childImageSharp.fluid}
-            className={classes.customImage}
-            imgStyle={{ borderRadius: "5px" }}
-          />
         </div>
         <div className={classes.cardDiv}>
           <CustomCard
@@ -63,16 +91,11 @@ const HomePage = ({ data }) => {
           />
           <CustomCard
             image={data.develop.childImageSharp.fluid}
-            titleText="Developer"
+            titleText="Designer/Developer"
             excerptText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quam purus, pulvinar et lorem a, fermentum dapibus libero. Ut eget felis at magna aliquam dictum."
             buttonText="My Projects"
             link="/projects"
-          />
-          <CustomCard
-            image={data.story.childImageSharp.fluid}
-            titleText="Storyteller"
-            excerptText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quam purus, pulvinar et lorem a, fermentum dapibus libero. Ut eget felis at magna aliquam dictum."
-            buttonText="My Stories"
+            imgStyle={{ objectPosition: "top center" }}
           />
         </div>
       </Container>

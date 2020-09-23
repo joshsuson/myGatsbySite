@@ -7,7 +7,6 @@ const useStyles = makeStyles(theme => ({
   cardDiv: {
     textAlign: "center",
     margin: "48px auto",
-
     [theme.breakpoints.up("md")]: {
       width: "65%",
     },
