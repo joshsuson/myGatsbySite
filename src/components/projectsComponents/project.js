@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     width: "80%",
     padding: "24px",
     margin: "24px auto",
+    backgroundColor: "hsl(217, 14%, 17%)",
   },
   customImg: {
     width: "50%",

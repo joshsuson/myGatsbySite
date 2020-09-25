@@ -18,6 +18,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: "hsla(218, 100%, 65%, .80)",
   },
 }))
 

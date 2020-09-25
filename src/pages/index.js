@@ -9,7 +9,6 @@ import Img from "gatsby-image"
 const useStyles = makeStyles(theme => ({
   customContainer: {
     padding: "24px 0",
-    marginBottom: "24px",
   },
   customImage: {
     width: "100%",
