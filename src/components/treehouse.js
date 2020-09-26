@@ -57,10 +57,9 @@ const Treehouse = () => {
   return (
     <>
       <div className={classes.titleDiv}>
-        <Typography variant="h2">Techdegree Projects</Typography>
+        <Typography variant="h2">Practice Projects</Typography>
         <Typography variant="subtitle1">
-          Check out my projects from Team Treehouse's Front End Web Devolopment
-          Techdegree
+          Check out mockup projects I've built to practice my skills!
         </Typography>
       </div>
       {project === null && (

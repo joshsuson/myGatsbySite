@@ -7,7 +7,7 @@ const useStyles = makeStyles({
   customDiv: {
     display: "flex",
     flexWrap: "wrap",
-    justifyContent: "center",
+    justifyContent: "space-around",
     margin: "32px 0",
   },
 })
