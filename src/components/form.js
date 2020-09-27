@@ -20,6 +20,18 @@ const useStyles = makeStyles(theme => ({
   },
   customInput: {
     marginBottom: "16px",
+    "& fieldset": {
+      borderColor: "hsl(218, 14%, 50%)",
+    },
+    "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline": {
+      borderColor: "hsl(218, 14%, 80%)",
+    },
+    "& .MuiOutlinedInput-root": {
+      color: "hsl(218, 14%, 50%)",
+    },
+    "& label": {
+      color: "hsl(218, 14%, 50%)",
+    },
   },
   lastNameInput: {
     [theme.breakpoints.up("md")]: {
@@ -41,6 +53,11 @@ const useStyles = makeStyles(theme => ({
   customButton: {
     display: "flex",
     margin: "0 auto",
+    background: "linear-gradient(180deg, #669dff 0%, #2373ff 100%)",
+    boxShadow: "0 4px 8px rgba(35, 115, 255, .40)",
+    "&:hover": {
+      boxShadow: "0 4px 16px rgba(35, 115, 255, .40)",
+    },
     [theme.breakpoints.up("md")]: {
       width: "92%",
     },

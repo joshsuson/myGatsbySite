@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import "../../utils/fontawesome"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   customPaper: {
     width: "80%",
     padding: "24px",
@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     borderRadius: "15px",
   },
   imgDiv: {
-    width: "50%",
+    width: "90%",
     margin: "0 auto",
     marginBottom: "16px",
     borderRadius: "15px",
@@ -37,20 +37,28 @@ const useStyles = makeStyles({
   },
   buttonDiv: {
     textAlign: "center",
-    width: "60%",
+    width: "100%",
     margin: "16px auto",
     marginTop: "32px",
   },
   projectButton: {
-    marginRight: "8px",
     background: "linear-gradient(180deg, #669dff 0%, #2373ff 100%)",
     boxShadow: "0 4px 8px rgba(35, 115, 255, .40)",
     "&:hover": {
       boxShadow: "0 4px 16px rgba(35, 115, 255, .40)",
     },
+    width: "100%",
+    marginBottom: "16px",
+    [theme.breakpoints.up("md")]: {
+      width: "30%",
+      marginBottom: "0",
+      marginRight: "8px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "20%",
+    },
   },
   githubButton: {
-    marginLeft: "8px",
     background:
       "linear-gradient(180deg, #fff7c7 12%, #FFE32C 50%, #c7ba00 100%)",
     boxShadow: "0 4px 8px hsla(52, 100%, 59%, .40)",
@@ -60,11 +68,19 @@ const useStyles = makeStyles({
     "& span": {
       color: "#424a59",
     },
+    width: "100%",
+    [theme.breakpoints.up("md")]: {
+      width: "30%",
+      marginLeft: "8px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "20%",
+    },
   },
   textDiv: {
     margin: "0 auto",
     marginTop: "48px",
-    width: "60%",
+    width: "100%",
   },
   title: {
     textAlign: "center",
@@ -81,7 +97,7 @@ const useStyles = makeStyles({
       fill: "#424a59",
     },
   },
-})
+}))
 
 const Project = props => {
   const classes = useStyles()
