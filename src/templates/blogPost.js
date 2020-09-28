@@ -27,11 +27,17 @@ const useStyles = makeStyles(theme => ({
       width: "30%",
     },
   },
+  customTitle: {
+    fontSize: "3em",
+    [theme.breakpoints.up("md")]: {
+      fontSize: "6em",
+    },
+  },
 }))
 
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark
-  const { imgDiv, customBtn } = useStyles()
+  const { imgDiv, customBtn, customTitle } = useStyles()
   return (
     <Layout>
       <Container style={{ marginTop: "48px", marginBottom: "32px" }}>
@@ -41,7 +47,9 @@ const BlogPost = ({ data }) => {
             style={{ borderRadius: "15px" }}
           />
         </div>
-        <Typography variant="h1">{post.frontmatter.title}</Typography>
+        <Typography variant="h1" className={customTitle}>
+          {post.frontmatter.title}
+        </Typography>
         <Typography>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </Typography>
